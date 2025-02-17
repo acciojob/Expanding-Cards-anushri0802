@@ -1,1 +1,45 @@
-/*  your css code here. If applicable */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    width: 10%;
+    transition: all 0.7s ease;
+    display: flex;
+    justify-content: flex-start; /* Align text to the left */
+    align-items: flex-end;
+    cursor: pointer;
+    padding-left: 10px; /* Add padding to the left */
+}
+
+.panel h3 {
+    margin: 0;
+    font-size: 12px; /* Smaller font size */
+    color: white;
+    padding: 10px; /* Reduced padding */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.panel.active {
+    width: 100%;
+}
+
+.panel.active h3 {
+    opacity: 1;
+}
